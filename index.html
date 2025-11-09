@@ -484,8 +484,8 @@
         }
         
         .profile-pic {
-            width: 75px;
-            height: 75px;
+            width: 85px;
+            height: 85px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 0.4rem;
@@ -621,6 +621,27 @@
             color: white;
             font-size: 1rem;
             font-weight: 500;
+        }
+        
+        .preview-carousel {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 15px 15px 0 0;
+        }
+        
+        .preview-carousel img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out, transform 0.8s ease;
+        }
+        
+        .preview-carousel img.active {
+            opacity: 1;
+            transform: scale(1.05);
         }
         
         .dropdown-header {
@@ -1239,16 +1260,16 @@
         <div class="campus-content">
             <div class="leader-image">
                 <div class="leader-image-wrapper">
-                    <img src="./Assets/Management/Rezaul Huda Farazi-2.jpeg" alt="Director - Mr. Rezaul Huda Farazi">
+                    <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Director - Mr. Rezaul Huda Farazi">
                 </div>
             </div>
             <div class="campus-text leader-content">
-                <h3>Director</h3>
-                <h4>Mr. Rezaul Huda Farazi</h4>
-                <p>As the Director of the Huda Group of Institutions, Mr. Rezaul Huda Farazi has played a pivotal role in strengthening the institution's academic reputation and operational excellence. A dynamic leader with a modern vision, he is dedicated
-                    to fostering innovation, discipline, and global educational standards within the campus community.</p>
-                <p>Mr. Farazi continues to expand the institution's reach through progressive initiatives, student-centered governance, and collaboration with academic and industry partners. His leadership ensures that every student receives not just education,
-                    but also inspiration and guidance for future success.</p>
+                <h3>Principal</h3>
+                <h4>Dr. Jyotirmoy Deb</h4>
+                <p>Dr. Jyotirmoy Deb, Principal of Huda Group of Institutions, is an accomplished academician and researcher with over 15 years of distinguished experience in pharmaceutical education and research. A GATE-qualified scholar, Dr. Deb holds
+                    a D. Pharm. and B. Pharm. from North Bengal University, West Bengal, an M. Pharm. from VMRF Deemed University, Tamil Nadu, and a Ph.D. from Chandra Mohon Jha University.</p>
+                <p>As a respected academic leader, Dr. Deb has also served as an examiner and paper setter for around eight state and central universities. His dedication to fostering research-oriented learning, combined with his vision for holistic student
+                    development, continues to strengthen the academic foundation and reputation of the Huda Group of Institutions.</p>
                 <p><strong>Huda Group of Institutions:</strong> Founded in 2014<br>
                     <strong>School of Pharmaceutical Science & Technology:</strong> Established in 2020</p>
             </div>
@@ -1265,17 +1286,41 @@
                 <h3>Teaching Staff</h3>
                 <div class="team-grid">
                     <div class="profile-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Profile Icon" class="profile-pic">
+                        <div class="profile-name">Dr. Jyotirmoy Deb</div>
+                        <div class="profile-qual">M. Pharm.</div>
+                        <div class="profile-email">jyotirmoydev@gmail.com</div>
+                        <div class="profile-phone">+91 7989650877</div>
+                    </div>
+
+                    <div class="profile-card">
                         <img src="./Assets/Teaching-Staff/Mohibur Rahman.jpeg" alt="Teacher" class="profile-pic">
                         <div class="profile-name">Mr. Mohibur Rahman</div>
-                        <div class="profile-qual">Ph. Chemistry</div>
-                        <div class="profile-email">mohiburmrmrmr007@gmail.com</div>
+                        <div class="profile-qual">M. Pharm.(Ph.D)</div>
+                        <div class="profile-email">mohibur007@gmail.com</div>
                         <div class="profile-phone">+91 7002682884</div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Profile Icon" class="profile-pic">
+                        <div class="profile-name">Mrs. Nargis Sultana</div>
+                        <div class="profile-qual">B.Pharm</div>
+                        <div class="profile-email">nargissultana89@gmail.com</div>
+                        <div class="profile-phone">+91 8403020910</div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="./Assets/Teaching-Staff/Shahjalal Alom.jpeg" alt="Teacher" class="profile-pic">
+                        <div class="profile-name">Mr. Shahjalal Alom </div>
+                        <div class="profile-qual">M. Pharm.(Ph.D)</div>
+                        <div class="profile-email">shahjalalalam@gmail.com</div>
+                        <div class="profile-phone">+91 7019948907</div>
                     </div>
 
                     <div class="profile-card">
                         <img src="./Assets/Teaching-Staff/Jisu Das.jpeg" alt="Teacher" class="profile-pic">
                         <div class="profile-name">Mr. Jisu Das </div>
-                        <div class="profile-qual">Ph. Ceutics </div>
+                        <div class="profile-qual">M. Pharm.(Ph.D)</div>
                         <div class="profile-email">djisu212@gmail.com</div>
                         <div class="profile-phone">+91 9531115187</div>
                     </div>
@@ -1289,19 +1334,67 @@
                     </div>
 
                     <div class="profile-card">
-                        <img src="./Assets/Teaching-Staff/Shahjalal Alom.jpeg" alt="Teacher" class="profile-pic">
-                        <div class="profile-name">Mr. Shahjalal Alom </div>
-                        <div class="profile-qual">Ph. Cology</div>
-                        <div class="profile-email">shahjalalalam@gmail.com</div>
-                        <div class="profile-phone">+91 7019948907</div>
+                        <img src="./Assets/Teaching-Staff/Mokinur Rahman.jpeg" alt="Teacher" class="profile-pic">
+                        <div class="profile-name">Mr. Mokinur Rahman</div>
+                        <div class="profile-qual">M. Pharm.(Ph.D)</div>
+                        <div class="profile-email">mokinurrahman@gmail.com</div>
+                        <div class="profile-phone">+91 8431341271</div>
                     </div>
 
                     <div class="profile-card">
-                        <img src="./Assets/Teaching-Staff/Mokinur Rahman.jpeg" alt="Teacher" class="profile-pic">
-                        <div class="profile-name">Mr. Mokinur Rahman</div>
-                        <div class="profile-qual">Ph. Cology</div>
-                        <div class="profile-email">mokinurrahman@gmail.com</div>
-                        <div class="profile-phone">+91 8431341271</div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Teacher" class="profile-pic">
+                        <div class="profile-name">Ms. Santona Sarmah</div>
+                        <div class="profile-qual">M. Pharm.</div>
+                        <div class="profile-email">santona.sarmah93@gmail.com</div>
+                        <div class="profile-phone">+91 7002142240</div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Teacher" class="profile-pic">
+                        <div class="profile-name">Mr. Burhan Ali</div>
+                        <div class="profile-qual">M. Pharm.</div>
+                        <div class="profile-email">burhanalia123@gmail.com</div>
+                        <div class="profile-phone">+91 9706583312</div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Teacher" class="profile-pic">
+                        <div class="profile-name">Mridusmita Das</div>
+                        <div class="profile-qual">M. Pharm.</div>
+                        <div class="profile-email">mridusmitadas11@gmail.com</div>
+                        <div class="profile-phone">+91 8473833829</div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="./Assets/Management/Mr. Abul Bashar Faruki.jpeg" alt="Teacher" class="profile-pic">
+                        <div class="profile-name">Mr. Abul Bashar Faruki</div>
+                        <div class="profile-qual">Lab Technician</div>
+                        <div class="profile-email">abulbasharfaruki91@gmail.com</div>
+                        <div class="profile-phone">+91 9085256416</div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="./Assets/Management/Sadique Ali.jpeg" alt="Profile Icon" class="profile-pic">
+                        <div class="profile-name">Mr. Sadik Ali</div>
+                        <div class="profile-qual">Lab Technician</div>
+                        <div class="profile-email">sadiqueahmed854@gmail.com</div>
+                        <div class="profile-phone">+91 7002879123</div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="./Assets/Management/Mr. Didarul Hussain.jpeg" alt="Profile Icon" class="profile-pic">
+                        <div class="profile-name">Mr. Didarul Hussain</div>
+                        <div class="profile-qual">Lab Technician</div>
+                        <div class="profile-email">didarulhussain123@gmail.com</div>
+                        <div class="profile-phone">+91 9394309675</div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Profile Icon" class="profile-pic">
+                        <div class="profile-name">Mr. Ikbal Hussain</div>
+                        <div class="profile-qual">Lab Technician</div>
+                        <div class="profile-email">ikbalhussainkjbn@gmail.com</div>
+                        <div class="profile-phone">+91 9678465205</div>
                     </div>
 
                     <div class="profile-card">
@@ -1345,14 +1438,6 @@
                     </div>
 
                     <div class="profile-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Profile Icon" class="profile-pic">
-                        <div class="profile-name">Mrs. Nargis Sultana</div>
-                        <div class="profile-qual">B.Pharm</div>
-                        <div class="profile-email">nazzsultana14@gmail.com</div>
-                        <div class="profile-phone">+91 7002672772</div>
-                    </div>
-
-                    <div class="profile-card">
                         <img src="./Assets/Management/Rezuan Hussain.jpeg" alt="Profile Icon" class="profile-pic">
                         <div class="profile-name">Mr. Rezuan Hussain</div>
                         <div class="profile-qual">Librarian</div>
@@ -1366,30 +1451,6 @@
                         <div class="profile-qual">Library Asst</div>
                         <div class="profile-email">mitaliranidas1981@gmail.com</div>
                         <div class="profile-phone">+91 9127357768</div>
-                    </div>
-
-                    <div class="profile-card">
-                        <img src="./Assets/Management/Abul Bashar Faruki.jpeg" alt="Profile Icon" class="profile-pic">
-                        <div class="profile-name">Mr. Abul Bashar Faruki</div>
-                        <div class="profile-qual">Lab Technician</div>
-                        <div class="profile-email">abulbasharfaruki91@gmail.com</div>
-                        <div class="profile-phone">+91 7002812690</div>
-                    </div>
-
-                    <div class="profile-card">
-                        <img src="./Assets/Management/Sadique Ali.jpeg" alt="Profile Icon" class="profile-pic">
-                        <div class="profile-name">Mr. Sadique Ali</div>
-                        <div class="profile-qual">Lab Technician</div>
-                        <div class="profile-email">sadiqueahmed854@gmail.com</div>
-                        <div class="profile-phone">+91 6001908243</div>
-                    </div>
-
-                    <div class="profile-card">
-                        <img src="./Assets/Management/Didarul Hussain.jpeg" alt="Profile Icon" class="profile-pic">
-                        <div class="profile-name">Didarul Hussain</div>
-                        <div class="profile-qual">Lab Technician</div>
-                        <div class="profile-email">hussaindidarul26@gmail.com</div>
-                        <div class="profile-phone">+91 9394309675</div>
                     </div>
 
                     <div class="profile-card">
@@ -1409,35 +1470,39 @@
                 <h3>Management</h3>
                 <div class="team-grid">
                     <div class="profile-card">
+                        <img src="./Assets/Founder.jpeg" alt="Manager" class="profile-pic">
+                        <div class="profile-name">Mr. Nurul Huda</div>
+                        <div class="profile-qual">Founder</div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="./Assets/Management/Rezaul Huda Farazi-2.jpeg" alt="Manager" class="profile-pic">
+                        <div class="profile-name">Mr. Rezaul Huda Farazi</div>
+                        <div class="profile-qual">President</div>
+                    </div>
+
+                    <div class="profile-card">
                         <img src="./Assets/Management/Raihanul Meraj.jpeg" alt="Manager" class="profile-pic">
                         <div class="profile-name">Mrs. Raihanul Meraj</div>
                         <div class="profile-qual">President</div>
-                        <div class="profile-email">merajraihanul8@gmail.com</div>
-                        <div class="profile-phone">+91 8638075297</div>
                     </div>
 
                     <div class="profile-card">
                         <img src="./Assets/Management/Rockybul Huda Farazi.jpeg" alt="Manager" class="profile-pic">
                         <div class="profile-name">Mr. Rockybul Huda Farazi</div>
                         <div class="profile-qual">Associate Director</div>
-                        <div class="profile-email">rockybulhudafarazi078@gmail.com</div>
-                        <div class="profile-phone">+91 9435065365</div>
                     </div>
 
                     <div class="profile-card">
                         <img src="./Assets/Management/Rashiful Huda farazi.jpeg" alt="Manager" class="profile-pic">
                         <div class="profile-name">Mr. Rashiful Huda Farazi</div>
                         <div class="profile-qual">Associate Director</div>
-                        <div class="profile-email">rashifulhuda3@gmail.com</div>
-                        <div class="profile-phone">+91 9435065365</div>
                     </div>
 
                     <div class="profile-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Profile Icon" class="profile-pic">
+                        <img src="./Assets/Management/Amir Hussain.jpeg" alt="Profile Icon" class="profile-pic">
                         <div class="profile-name">Mr. Amir Hussain </div>
                         <div class="profile-qual">General Secretary</div>
-                        <div class="profile-email">amirhussain068@gmail.com</div>
-                        <div class="profile-phone">+91 8638215038</div>
                     </div>
                 </div>
             </div>
@@ -1451,47 +1516,54 @@
         </div>
 
         <div class="dropdown-container">
+            <!-- Campus -->
             <div class="dropdown-wrapper">
                 <div class="dropdown" data-content="academics">
-                    <div class="preview-img">
-                        <img src="./Assets/Campus/Campus.jpeg" alt="Campus">
+                    <div class="preview-carousel" data-carousel="academics">
+                        <img src="./Assets/Campus/Campus.jpeg" alt="Campus" class="active">
+                        <img src="./Assets/Campus/Campus 2.jpeg" alt="Campus">
+                        <img src="./Assets/Campus/Campus 3.jpeg" alt="Campus">
                     </div>
                     <div class="dropdown-header">Explore Campus<span>▼</span></div>
                 </div>
-                <div class="dropdown-content-area mobile-content" data-for="academics">
-                    <!-- Mobile content for academics -->
-                </div>
+                <div class="dropdown-content-area mobile-content" data-for="academics"></div>
             </div>
 
+            <!-- Classroom -->
             <div class="dropdown-wrapper">
                 <div class="dropdown" data-content="sports">
-                    <div class="preview-img">
-                        <img src="./Assets/Classroom/Classroom.jpeg" alt="Classroom">
+                    <div class="preview-carousel" data-carousel="sports">
+                        <img src="./Assets/Classroom/Classroom.jpeg" alt="Classroom" class="active">
+                        <img src="./Assets/Classroom/Classroom 2.jpeg" alt="Classroom">
+                        <img src="./Assets/Classroom/Classroom 3.jpeg" alt="Classroom">
                     </div>
                     <div class="dropdown-header">Explore Classroom<span>▼</span></div>
                 </div>
-                <div class="dropdown-content-area mobile-content" data-for="sports">
-                    <!-- Mobile content for sports -->
-                </div>
+                <div class="dropdown-content-area mobile-content" data-for="sports"></div>
             </div>
 
+            <!-- Events -->
             <div class="dropdown-wrapper">
                 <div class="dropdown" data-content="events">
-                    <div class="preview-img">
-                        <img src="./Assets/Events-&-Celebrations/Event 3.jpeg" alt="Events">
+                    <div class="preview-carousel" data-carousel="events">
+                        <img src="./Assets/Events-&-Celebrations/Event.jpeg" alt="Event" class="active">
+                        <img src="./Assets/Events-&-Celebrations/Event 2.jpeg" alt="Event">
+                        <img src="./Assets/Events-&-Celebrations/Event 3.jpeg" alt="Event">
                     </div>
                     <div class="dropdown-header">Explore Events<span>▼</span></div>
                 </div>
-                <div class="dropdown-content-area mobile-content" data-for="events">
-                    <!-- Mobile content for events -->
-                </div>
+                <div class="dropdown-content-area mobile-content" data-for="events"></div>
             </div>
         </div>
 
         <!-- Desktop Dropdown Content -->
-        <div class="dropdown-content-area desktop-content" id="dropdown-content-area">
-            <!-- Desktop content will load here -->
-        </div>
+        <div class="dropdown-content-area desktop-content" id="dropdown-content-area"></div>
+    </section>
+
+    <!-- Desktop Dropdown Content -->
+    <div class="dropdown-content-area desktop-content" id="dropdown-content-area">
+        <!-- Desktop content will load here -->
+    </div>
     </section>
 
     <!-- Courses Section -->
@@ -1701,6 +1773,23 @@
             }
         });
 
+        // === CAROUSEL PREVIEWS ===
+        const carousels = document.querySelectorAll('.preview-carousel');
+
+        carousels.forEach(carousel => {
+            const images = carousel.querySelectorAll('img');
+            let current = 0;
+
+            function showNextImage() {
+                images[current].classList.remove('active');
+                current = (current + 1) % images.length;
+                images[current].classList.add('active');
+            }
+
+            // Auto slide every 3 seconds
+            setInterval(showNextImage, 3000);
+        });
+
         // Dropdown functionality
         const dropdowns = document.querySelectorAll('.dropdown');
         const desktopContentArea = document.querySelector('.desktop-content');
@@ -1908,7 +1997,7 @@
                     form.style.display = 'none';
 
                     // Automatically trigger PDF download
-                    downloadPDF("https://drive.google.com/uc?export=download&id=1BehI6X41px7GNLgV_Fs3PeBctlMwdCK1");
+                    downloadPDF("https://drive.google.com/uc?export=download&id=1TdtzCWtl-WvZUkvGOdVVdjC27uyyODRS");
 
                     // Close dialog after delay
                     setTimeout(() => closeDialog(), 2500);
