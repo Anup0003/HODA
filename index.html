@@ -339,6 +339,129 @@
             color: var(--text-light);
             font-size: 1.1rem;
         }
+        /* Notifications Section */
+        
+        .notifications-section {
+            padding: 2rem 5%;
+            background: #f9f9f9;
+        }
+        
+        .notifications-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid #e0e0e0;
+        }
+        
+        .notifications-header {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 1.5rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .megaphone-icon {
+            font-size: 2rem;
+        }
+        
+        .notifications-wrapper {
+            height: 350px;
+            overflow: hidden;
+            padding: 1.5rem;
+            background: #f5f7fa;
+            position: relative;
+        }
+        
+        .notifications-carousel {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            animation: scrollVertical 15s linear infinite;
+        }
+
+        .notifications-wrapper:hover .notifications-carousel {
+            animation-play-state: paused;
+        }
+
+        @keyframes scrollVertical {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+        
+        .notification-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 1px solid #eaeaea;
+        }
+        
+        .notification-icon {
+            width: 20px;
+            height: 20px;
+            background: var(--primary);
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 5px;
+        }
+        
+        .notification-content {
+            flex: 1;
+        }
+        
+        .notification-content h3 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .notification-content h3 a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .notification-content h3 a:hover {
+            text-decoration: underline;
+        }
+        
+        .notification-details {
+            margin-bottom: 1rem;
+        }
+        
+        .notification-details h4 {
+            color: #444;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.2rem;
+        }
+        
+        .notification-details p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .notification-footer {
+            border-top: 1px dashed #ddd;
+            padding-top: 1rem;
+            margin-top: 1rem;
+            color: #777;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+
         /* Campus Section */
         
         .campus-content {
@@ -455,6 +578,216 @@
         .vm-box h3 {
             font-size: 2rem;
             margin-bottom: 1.5rem;
+        }
+        /* Features Section */
+        
+        .feature-section {
+            padding: 4rem 5%;
+            background: var(--bg-light); /* Blends better than stark white */
+        }
+        
+        .feature-box {
+            background: white;
+            padding: 0; /* Removed padding to allow header to stretch */
+            border-radius: 20px; /* Matched to course cards */
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            border: none;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .feature-header-bg {
+            background: var(--bg-gradient);
+            padding: 2rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            color: white;
+        }
+        
+        .feature-header-bg h3 {
+            font-size: 1.5rem;
+            color: white;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .feature-body {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            flex: 1;
+        }
+        
+        .feature-badge {
+            background: var(--primary-light);
+            color: white;
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            align-self: flex-start;
+            line-height: 1.4;
+        }
+
+        .feature-badge.gold {
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            color: #fff;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            border: none;
+        }
+        
+        .feature-subtitle {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .feature-quote {
+            border-left: 4px solid var(--accent);
+            padding: 1rem;
+            background: var(--bg-light);
+            font-weight: 600;
+            color: var(--text-dark);
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .feature-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .feature-tags span {
+            background: white;
+            border: 1px solid #e0e0e0;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .feature-footer {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: auto;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .free-badge {
+            background: var(--accent); /* Updated from harsh red to theme accent */
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .location {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .award-title {
+            font-size: 1.6rem;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+
+        .benefits-box {
+            border: 2px solid #f0f0f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            background: white;
+            margin-top: 1rem;
+            position: relative;
+        }
+
+        .benefits-header {
+            background: var(--bg-gradient); /* Updated from green */
+            color: white;
+            display: inline-flex;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            margin-top: -2.5rem;
+            align-items: center;
+            gap: 5px;
+            box-shadow: 0 4px 10px rgba(74, 20, 140, 0.2);
+        }
+
+        .benefits-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .benefits-list li {
+            font-size: 1.1rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-dark);
+        }
+
+        .feature-footer-dark {
+            background: var(--primary-dark); /* Updated from dark slate blue */
+            color: white;
+            padding: 1.2rem;
+            border-radius: 0 0 20px 20px;
+            text-align: center;
+            margin-top: auto;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
         /* Leadership Section */
         
@@ -1232,6 +1565,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#notifications">Notifications</a></li>
                 <li><a href="#community">Community</a></li>
                 <li><a href="#courses">Courses</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -1263,6 +1597,72 @@
                     <span class="dot active" data-slide="0"></span>
                     <span class="dot" data-slide="1"></span>
                     <span class="dot" data-slide="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notifications Section -->
+    <section class="notifications-section" id="notifications">
+        <div class="notifications-container">
+            <div class="notifications-header">
+                <span class="megaphone-icon">📢</span> Notifications
+            </div>
+            <div class="notifications-wrapper">
+                <div class="notifications-carousel">
+                    <!-- Notification 1 -->
+                    <div class="notification-card">
+                        <div class="notification-icon"></div>
+                        <div class="notification-content">
+                            <h3>Information regarding CEE for Admission in Pharmacy for the session 2026</h3>
+                            <div class="notification-details">
+                                <h4>Application Deadline</h4>
+                                <p>From 20/03/2026 to 30/04/2026</p>
+                                <h4>Date of Examination</h4>
+                                <p>07/06/2026</p>
+                            </div>
+                            <div class="notification-footer">
+                                <span>🗓️ Posted: April 13, 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Notification 2 -->
+                    <div class="notification-card">
+                        <div class="notification-icon"></div>
+                        <div class="notification-content">
+                            <h3><a href="https://ssuhs.formsrec.in/" target="_blank">Online Application Form Link for CEE for admission Pharmacy for the session 2026</a></h3>
+                            <div class="notification-footer">
+                                <span>🗓️ Posted: April 13, 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Duplicate for smooth infinite scroll -->
+                    <!-- Notification 1 (Copy) -->
+                    <div class="notification-card">
+                        <div class="notification-icon"></div>
+                        <div class="notification-content">
+                            <h3>Information regarding CEE for Admission in Pharmacy for the session 2026</h3>
+                            <div class="notification-details">
+                                <h4>Application Deadline</h4>
+                                <p>From 20/03/2026 to 30/04/2026</p>
+                                <h4>Date of Examination</h4>
+                                <p>07/06/2026</p>
+                            </div>
+                            <div class="notification-footer">
+                                <span>🗓️ Posted: April 13, 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Notification 2 (Copy) -->
+                    <div class="notification-card">
+                        <div class="notification-icon"></div>
+                        <div class="notification-content">
+                            <h3><a href="https://ssuhs.formsrec.in/" target="_blank">Online Application Form Link for CEE for admission Pharmacy for the session 2026</a></h3>
+                            <div class="notification-footer">
+                                <span>🗓️ Posted: April 13, 2026</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1317,6 +1717,57 @@
         </div>
     </section>
 
+    <!-- Features / Highlights Section -->
+    <section class="feature-section">
+        <div class="vm-container">
+            <div class="feature-box">
+                <div class="feature-header-bg">
+                    <div class="feature-icon">🎓</div>
+                    <h3>FREE CEE (PHARMACIST) COACHING</h3>
+                </div>
+                <div class="feature-body">
+                    <div class="feature-badge">📄 State Level Entrance Under SSUHS</div>
+                    <div class="feature-subtitle">👥 Expert guidance to crack the SSUHS CEE.</div>
+                    <div class="feature-quote">
+                        100% free · At College premises · No hidden costs.
+                    </div>
+                    <div class="feature-tags">
+                        <span>👨‍🏫 EXPERT MENTORS</span>
+                        <span>⏱️ SUFFICIENT LECTURES</span>
+                        <span>📈 HIGH SUCCESS RATE</span>
+                    </div>
+                    <div class="feature-footer">
+                        <div class="free-badge">🏛️ 100% FREE</div>
+                        <div class="location">📍 SPST Campus, Kanuwamari</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-header-bg">
+                    <div class="feature-icon">🎖️</div>
+                    <h3>AWARD FOR TOPPERS</h3>
+                </div>
+                <div class="feature-body" style="padding-bottom: 0;">
+                    <div class="award-title">AMBAJ ALI FARAZI EXCELLENCE AWARD</div>
+                    <div class="feature-badge gold">👑 For University Rank Holders</div>
+                    
+                    <div class="benefits-box">
+                        <div class="benefits-header">💰 BENEFITS</div>
+                        <ul class="benefits-list">
+                            <li>🪙 ₹25,000 CASH</li>
+                            <li>🏅 Memento</li>
+                            <li>🎓 Certificate of excellence</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="feature-footer-dark">
+                    🏆 Rank holders receive <strong>₹25,000 + memento + certificate</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Vision & Mission -->
     <section class="vm-section">
         <div class="vm-container">
@@ -1331,6 +1782,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Leadership Section -->
     <section id="community" class="leadership-section">
@@ -1446,27 +1898,11 @@
                     </div>
 
                     <div class="profile-card">
-                        <img src="./Assets/Teaching-Staff/Rikttah-Ahmed.jpeg" alt="Teacher" class="profile-pic">
-                        <div class="profile-name">Rikttah Ahmed</div>
-                        <div class="profile-qual">Ph. Chemistry</div>
-                        <div class="profile-email">rikttahahmed@gmail.com</div>
-                        <div class="profile-phone">+91 8724896373</div>
-                    </div>
-
-                    <div class="profile-card">
                         <img src="./Assets/Teaching-Staff/Sahid-Ahmed.jpeg" alt="Profile Icon" class="profile-pic">
                         <div class="profile-name">Mr. Sahid Ahmed</div>
                         <div class="profile-qual">Ph. Chemistry</div>
                         <div class="profile-email">sahidahmed1998@gmail.com</div>
                         <div class="profile-phone">+91 9678807507</div>
-                    </div>
-
-                    <div class="profile-card">
-                        <img src="./Assets/Teaching-Staff/Saruma-Sahin.jpeg" alt="Teacher" class="profile-pic">
-                        <div class="profile-name">Ms. Saruma Sahin</div>
-                        <div class="profile-qual">Ph. Ceutics</div>
-                        <div class="profile-email">sarumasahin2020@gmail.com</div>
-                        <div class="profile-phone">+91 9365913404</div>
                     </div>
 
                     <div class="profile-card">
@@ -1524,6 +1960,30 @@
                         <div class="profile-email">afrinaahmed6656@gmail.com</div>
                         <div class="profile-phone">+91 9395156656</div>
                     </div>
+
+                    <div class="profile-card">
+                        <img src="./Assets/Teaching-Staff/Farhin-Tamanna-Choudhury.jpeg" alt="Profile Icon" class="profile-pic">
+                        <div class="profile-name">Farhin Tamanna Choudhury</div>
+                        <div class="profile-qual">Pharmacology</div>
+                        <div class="profile-email">ftamannachoudhury@gmail.com</div>
+                        <div class="profile-phone">+91 6002620982</div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="./Assets/Teaching-Staff/Mohammed-Asif-Ahmed.jpeg" alt="Profile Icon" class="profile-pic">
+                        <div class="profile-name">Mohammed Asif Ahmed</div>
+                        <div class="profile-qual">Pharmaceuties</div>
+                        <div class="profile-email">asif80743@gmail.com</div>
+                        <div class="profile-phone">+91 9126185937</div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="./Assets/Teaching-Staff/Jubair-Sikdar.jpeg" alt="Profile Icon" class="profile-pic">
+                        <div class="profile-name">Jubair Sikdar</div>
+                        <div class="profile-qual">Pharmaceutics Chemistry</div>
+                        <div class="profile-email">jubair017sikdar@gmail.com</div>
+                        <div class="profile-phone">+91 8135833479</div>
+                    </div>
                 </div>
             </div>
 
@@ -1565,7 +2025,7 @@
 
                     <div class="profile-card">
                         <img src="./Assets/Management/Amir-Hussain.jpeg" alt="Profile Icon" class="profile-pic">
-                        <div class="profile-name">Mr. Amir Hussain </div>
+                        <div class="profile-name">Mr. Amir Hussain</div>
                         <div class="profile-qual">General Secretary</div>
                     </div>
                 </div>
